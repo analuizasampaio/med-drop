@@ -1,0 +1,27 @@
+<div *ngIf="hideForm; else cadastroForm">
+    <div class="opcoes">
+        <p>Por favor selecione uma opção para cadastro</p>
+        <div class="opcoes-links">
+            <a routerLink="/cadastro" [queryParams]="{ tipo: 'profissional'}">Profissional</a>
+            <a routerLink="/cadastro" [queryParams]="{ tipo: 'paciente'}">Paciente</a>
+            <a routerLink="/cadastro" [queryParams]="{ tipo: 'produto'}">Produto</a>
+            <a routerLink="/cadastro" [queryParams]="{ tipo: 'empresa'}">Empresa</a>
+        </div>
+    </div>
+</div>
+
+<ng-template #cadastroForm>
+    <section>
+        <img src="../../assets/paciente-e-doutor.png" alt="">
+
+        <form #form="ngForm" ngForm (ngSubmit)="cadastrar(form.value)">
+            <h1>Cadastro {{tipo}}</h1>
+
+            <div *ngFor="let campo of campos;">
+                <label [for]="campo.nome">{{campo.nome}}</label>
+                <input [type]="campo.type" [id]="campo.nome" [name]="campo.nome" ngModel required>
+            </div>
+            <button type="sumbit" [disabled]="form.invalid">Cadastrar</button>
+        </form>
+    </section>
+</ng-template>

@@ -1,0 +1,19 @@
+<section>
+    <h2>Escolha sua <span>categoria</span></h2>
+
+    <div class="container">
+        <div class="categoria">
+            <a routerLink="/login" [queryParams]="{ tipo: 'profissional'}">
+                Profissional
+            </a>
+            <a routerLink="/login" [queryParams]="{ tipo: 'farmacia'}">
+                Farmácia
+            </a>
+            <a routerLink="/login" [queryParams]="{ tipo: 'cliente'}">
+                Cliente
+            </a>
+        </div>
+
+        <img src="../../assets/app-enfermeira.png" alt="imagem de uma enfermeira ajudando a usar o aplicativo">
+    </div>
+</section>

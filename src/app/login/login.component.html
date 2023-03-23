@@ -1,0 +1,17 @@
+<div class="container">
+    <img src="../../assets/doutor.png" alt="">
+
+    <form #form="ngForm" ngForm (ngSubmit)="login(form.value)">
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha">
+        </div>
+
+        <button [disabled]="form.invalid" type="submit">Login</button>
+    </form>
+</div>

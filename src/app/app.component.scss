@@ -1,0 +1,37 @@
+main {
+  padding: 0 3em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+h1 {
+  color: var(--branco);
+  margin: 0;
+}
+
+header,
+footer {
+  width: 100%;
+  background-color: var(--azul);
+}
+
+header {
+  padding: 1.5em 2em;
+}
+
+footer {
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  text-align: center;
+  color: var(--branco);
+  font-weight: bold;
+  font-size: 1.5em;
+}
